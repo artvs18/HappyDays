@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HappyDays" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy everyday!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-lv-weI">
+                                <rect key="frame" x="85" y="55" width="205" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick your date of birth:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAJ-pq-Cwz">
+                                <rect key="frame" x="92" y="177" width="191" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="g6m-fs-1fT">
+                                <rect key="frame" x="27.666666666666657" y="237" width="320" height="216"/>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-3187305017">
+                                    <!--1899-12-31 21:29:43 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="61L-J0-Yed"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've been enjoying  life for ... days" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i22-a2-2gQ">
+                                <rect key="frame" x="45" y="553" width="292" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIG-eg-zl8">
+                                <rect key="frame" x="147.66666666666666" y="483" width="80" height="50"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="T5u-AX-5L2"/>
+                                    <constraint firstAttribute="height" constant="50" id="uox-gR-DQE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Result">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="I31-MQ-4JM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UIG-eg-zl8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FZK-sc-7IP"/>
+                            <constraint firstItem="UIG-eg-zl8" firstAttribute="top" secondItem="g6m-fs-1fT" secondAttribute="bottom" constant="30" id="IDh-yf-Ar9"/>
+                            <constraint firstItem="KAJ-pq-Cwz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RFM-aN-qce"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i22-a2-2gQ" secondAttribute="trailing" constant="38" id="SHo-Um-nI6"/>
+                            <constraint firstItem="i22-a2-2gQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="XcR-yb-lwY"/>
+                            <constraint firstItem="DZC-lv-weI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="YRQ-Wj-nj2"/>
+                            <constraint firstItem="DZC-lv-weI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPC-UT-efU"/>
+                            <constraint firstItem="KAJ-pq-Cwz" firstAttribute="top" secondItem="DZC-lv-weI" secondAttribute="bottom" constant="74" id="rdG-94-nTt"/>
+                            <constraint firstItem="g6m-fs-1fT" firstAttribute="top" secondItem="KAJ-pq-Cwz" secondAttribute="bottom" constant="38" id="sM9-rc-GuG"/>
+                            <constraint firstItem="g6m-fs-1fT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tzM-SC-sV3"/>
+                            <constraint firstItem="i22-a2-2gQ" firstAttribute="top" secondItem="UIG-eg-zl8" secondAttribute="bottom" constant="20" id="yFy-4N-Ofe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="i22-a2-2gQ" id="LBa-Id-Kce"/>
+                        <outlet property="resultButton" destination="UIG-eg-zl8" id="0oY-Qa-n4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="2.9556650246305418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
